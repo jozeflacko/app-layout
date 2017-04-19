@@ -1,0 +1,51 @@
+body {
+	width:100%;
+	height:100%;	
+	position:fixed; /* Must be positioned due his children */
+}
+#jl-root {
+	position:fixed; /* Must be positioned due his children */
+	width:100%;
+	height:100%;
+	margin-top:-60px; /* to hide top push panel */
+	
+	transition: all 1s;
+}
+#jl-root #jl-top-push-panel {
+	width:100%;	
+	height:60px;
+}
+#jl-root #jl-top-fix-panel {
+	padding:5px;
+	width:100%;
+}
+#jl-root #jl-top-fix-panel .jl-buttonbar {
+	display:inline-block;
+}
+#jl-root #jl-top-fix-panel .jl-buttonbar .btn {	
+	border:1px solid #ddd;	
+	margin:0px;
+	background:white;
+	border-radius:0px;
+}
+#jl-root #jl-top-fix-panel .jl-horizontal-nav {
+	display:inline-block;
+}
+#jl-root #jl-content-container {
+	position: relative;
+	height: 1000px;
+}
+#jl-root #jl-content-container #jl-left-push-panel {
+	position: absolute;
+	height:100%;
+}
+
+#jl-root #jl-content-container #jl-content {
+	height:100%;
+}
+
+/* PUSHING PANELS */
+#jl-root.jl-pushed-top {
+	margin-top:0px; /* to show top push panel, normally -100px; */
+}
+
