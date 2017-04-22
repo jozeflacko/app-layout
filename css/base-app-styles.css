@@ -1,0 +1,71 @@
+body {
+	width:100%;
+	height:100%;
+}
+#jl-base-app {
+	/* This is just a container for whole application */
+}
+/* -------- HEAD --------- */
+#jl-base-app > #jl-head {
+	/* This is just a container for head part */
+
+	height:100px;
+	position:relative;
+	top:-50px; /* to hide by default head-push */
+	overflow:hidden;
+	transition: top 0.3s;
+}
+#jl-base-app > #jl-head > #jl-head-push {
+	background-color:green;
+	height:50px;
+}
+#jl-base-app > #jl-head > #jl-head-content {
+	background-color:orange;
+	height:50px;
+}
+#jl-base-app > #jl-head > #jl-head-content > #jl-buttons-bar {
+	background-color:yellow;
+}
+/* -------- MAIN --------- */
+#jl-base-app > #jl-main {
+	/* This is just a container for main part */
+
+	position:fixed;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:100%;
+	overflow-y:auto;
+	overflow-x:hidden;
+	margin-top:50px; /* space for header in page */
+	transition: margin-top 0.3s;
+}
+#jl-base-app > #jl-main > #jl-main-push {
+	background-color:silver;	
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+#jl-base-app > #jl-main > #jl-main-content {
+	background-color:darkslategrey;
+
+	height:inherit; /* Should take the fool size of page */
+	width:inherit;  /* Should take the fool size of page */
+}
+/* -------- FOOT --------- */
+#jl-base-app > #jl-foot {
+	/* This is just a container for foot part */
+
+	display:none;
+}
+
+/*  -------- ACTIONS -------- */
+
+/* --------- HEAD PUSH ACTIVE --------- */
+#jl-base-app.jl-head-push-is-active > #jl-head {
+	top:0;
+}
+#jl-base-app.jl-head-push-is-active > #jl-main {
+	margin-top:100px;
+}
+
+
