@@ -46,62 +46,32 @@ $( document ).ready(function() {
 			};			
 		})();
 		
-		function _installSlideout(){
+		function _installPushForMainPush(){
 			
-			// create new object
-			var slideout = new Slideout({
+			var slideoutProperties = {
 				'panel': _get.panel.mainContent()[0],
 				'menu':  _get.panel.mainPush()[0],
 				'padding': 250,
 				'tolerance': 70
-			});
+			}
+
+			var slideout = new Slideout( slideoutProperties );
+			
 			// bind to toggle button to open and close main-push panel
 			_get.btn.mainPush().click(function(e){ 
 				slideout.toggle(e);
 			});
+
+			// hide and show menu on resize			
 		}
-		function _bindToggleToHeadPushButton(){			
-			
+		function _bindToggleToHeadPushButton(){	
 			_get.btn.headPush().click(function(e){ 
 				_get.panel.base().toggleClass('jl-head-push-is-active');
 			});
-		}
-		
-		function _bindPushEventsOnButtons(){	
-				
-				var togglePushPanel = (function(){						
-					var $root = _get.panel.root();	
-					var pushed = 'jl-pushed';						
-					var topPushedClass = pushed + '-top';
-					var leftPushedClass = pushed + '-left';
-					
-					function togglePanel( $panel, classs ){
-						if ($panel.hasClass(classs))
-							$panel.removeClass(classs);
-						else 
-							$panel.addClass(classs);					
-					}						
-					
-					return {
-						// toggle class on root element
-						left : function(){
-							togglePanel( $root, leftPushedClass );			
-						},
-						// toggle class on root element
-						top: function(){							
-							togglePanel( $root, topPushedClass );			
-						},
-					}			
-				})();
-		}
-		
-		
+		}		
 		function _start(){
-			_installSlideout();
+			_installPushForMainPush();
 			_bindToggleToHeadPushButton();
-
-			//_bindPushEventsOnButtons();
-			//_bindHammerOnLeftPushPanel();
 		}
 		return {
 			start : _start,			

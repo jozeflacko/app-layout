@@ -16,15 +16,23 @@ body {
 	transition: top 0.3s;
 }
 #jl-base-app > #jl-head > #jl-head-push {
-	background-color:green;
+	background-color:white;
 	height:50px;
+	border-bottom:2px solid #EEE;
 }
 #jl-base-app > #jl-head > #jl-head-content {
-	background-color:orange;
+	background-color:white;
 	height:50px;
+	border-bottom:2px solid red;
 }
-#jl-base-app > #jl-head > #jl-head-content > #jl-buttons-bar {
-	background-color:yellow;
+#jl-base-app > #jl-head > #jl-head-content > .jl-buttons-bar {
+	
+	display:inline-block;
+	padding:7px;
+}
+#jl-base-app > #jl-head > #jl-head-content > .jl-buttons-bar .btn {
+	border:1px solid #DDD;
+	background-color:white
 }
 /* -------- MAIN --------- */
 #jl-base-app > #jl-main {
@@ -39,17 +47,21 @@ body {
 	overflow-x:hidden;
 	margin-top:50px; /* space for header in page */
 	transition: margin-top 0.3s;
+
 }
 #jl-base-app > #jl-main > #jl-main-push {
-	background-color:silver;	
+	background-color:#101010;
+	color:white;
+	border-right:2px solid red;	
 	overflow-y:auto;
 	overflow-x:hidden;
+	padding:10px;
 }
 #jl-base-app > #jl-main > #jl-main-content {
-	background-color:darkslategrey;
-
+	background-color:#dff1ff;	
+	padding:10px;
 	height:inherit; /* Should take the fool size of page */
-	width:inherit;  /* Should take the fool size of page */
+	width:inherit;  /* Should take the fool size of page */	
 }
 /* -------- FOOT --------- */
 #jl-base-app > #jl-foot {
@@ -60,7 +72,7 @@ body {
 
 /*  -------- ACTIONS -------- */
 
-/* --------- HEAD PUSH ACTIVE --------- */
+
 #jl-base-app.jl-head-push-is-active > #jl-head {
 	top:0;
 }
@@ -68,4 +80,17 @@ body {
 	margin-top:100px;
 }
 
+/* -------- MEDIAS -------- */
+
+@media screen and (min-width: 768px) {
+   	html.slideout-open #jl-base-app > #jl-main > #jl-main-content {        
+		padding-right: 260px; /* 250px because of menu and 10 for previous padding */
+    }
+}
+
+.jl-border {
+	border:1px solid #ddd;
+	padding:10px;
+	background:white;
+}
 
