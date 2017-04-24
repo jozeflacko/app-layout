@@ -16,7 +16,8 @@ body {
 	transition: top 0.3s;
 }
 #jl-base-app > #jl-head > #jl-head-push {
-	background-color:white;
+	background-color:#eee;	
+	padding:8px;
 	height:50px;
 	border-bottom:2px solid #EEE;
 }
@@ -37,37 +38,40 @@ body {
 /* -------- MAIN --------- */
 #jl-base-app > #jl-main {
 	/* This is just a container for main part */
-
 	position:fixed;
-	top:0px;
 	left:0px;
+	top: 0px;
+	margin-top: 50px;
 	height:100%;
 	width:100%;
 	overflow-y:auto;
 	overflow-x:hidden;
-	margin-top:50px; /* space for header in page */
+	 /* space for header in page */
 	transition: margin-top 0.3s;
-
 }
 #jl-base-app > #jl-main > #jl-main-push {
-	background-color:#101010;
+	background-color: #1b1b1b;
 	color:white;
-	border-right:2px solid red;	
 	overflow-y:auto;
-	overflow-x:hidden;
+	overflow-x: visible;
 	padding:10px;
+	margin-left: -3px; /* Small quickfix: This is strange but the menu is from plugin a little hiddne due main content. */
 }
 #jl-base-app > #jl-main > #jl-main-content {
-	background-color:#dff1ff;	
+	position:fixed;
+	overflow-y:auto;
+	background-color:#dff1ff;
 	padding:10px;
 	height:inherit; /* Should take the fool size of page */
-	width:inherit;  /* Should take the fool size of page */	
+	width:inherit;  /* Should take the fool size of page */
 }
 /* -------- FOOT --------- */
-#jl-base-app > #jl-foot {
-	/* This is just a container for foot part */
-
-	display:none;
+#jl-base-app > #jl-main > #jl-main-content > #jl-foot {
+	margin-bottom:50px; /* do not remove. needed because of header */
+	padding:10px;
+	text-align: center;
+	background-color:transparent;
+	transition: margin-bottom .3s; 
 }
 
 /*  -------- ACTIONS -------- */
@@ -79,13 +83,16 @@ body {
 #jl-base-app.jl-head-push-is-active > #jl-main {
 	margin-top:100px;
 }
+#jl-base-app.jl-head-push-is-active > #jl-main > #jl-main-content > #jl-foot {
+	margin-bottom:100px;
+}
 
 /* -------- MEDIAS -------- */
 
 @media screen and (min-width: 768px) {
-   	html.slideout-open #jl-base-app > #jl-main > #jl-main-content {        
-		padding-right: 260px; /* 250px because of menu and 10 for previous padding */
-    }
+   	html.slideout-open #jl-base-app > #jl-main > #jl-main-content {
+		padding-right: 245px; 
+	}
 }
 
 .jl-border {

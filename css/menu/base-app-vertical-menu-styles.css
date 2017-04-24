@@ -1,15 +1,21 @@
 .jl-vertical-menu {   
     padding:0px;   
+    border-bottom:1px solid #3e3e3e;
 }
 .jl-vertical-menu li.jl-link {
     list-style: none outside none;
     border:1px solid #3e3e3e;
+    border-bottom:none;
     background-color:#292929;
     color:white;
-    padding:8px;
-    margin:3px 0px;
+    padding:8px;  
     cursor:pointer;
 }
 .jl-vertical-menu li.jl-link:hover {
     background-color:#424242;   
+}
+.jl-vertical-menu li.jl-link i.fa {
+    margin-right:5px;
+    color:yellow;
+    
 }
