@@ -9,8 +9,3 @@
 <p>
 	Project contains starting point for creating Web App. It has working placeholders for menu, content, header and system panel
 </p>
-<p style='max-width:360px;'>
-	<h3>Screenshot</h3>
-	<img src="https://raw.githubusercontent.com/opam/JavascriptSnakeGame/master/img/screenshot.png" alt="Smiley face">
-</p> 
-s
