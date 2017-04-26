@@ -1,0 +1,120 @@
+body {
+	width:100%;
+	height:100%;
+}
+#jl-base-app {
+	position:relative;
+	top:0px;
+	transition: top .3s;
+	height:inherit;
+}
+#jl-base-app.jl-headpush-on {
+	top:50px;
+}
+/* -------- HEAD --------- */
+#jl-base-app > #jl-head {
+	position:fixed;
+	top:-50px;
+	left:0px;
+	width:100%;
+	transition: top .3s;
+	z-index:10;
+	background-color:white;
+}
+#jl-base-app.jl-headpush-on > #jl-head {
+	top:0px;
+}
+#jl-base-app > #jl-head > #jl-head-push {
+	height:50px;
+	background-color:#eee;	
+	padding:8px;	
+	border-bottom:2px solid #EEE;
+}
+#jl-base-app > #jl-head > #jl-head-content {
+	height:50px;
+	background-color:white;	
+	border-bottom:2px solid red;
+}
+#jl-base-app > #jl-head > #jl-head-content > .jl-logo {
+	display:inline-block;
+}
+#jl-base-app > #jl-head > #jl-head-content > .jl-buttons-bar {	
+	display:inline-block;
+	padding:7px;
+}
+#jl-base-app > #jl-head > #jl-head-content > .jl-buttons-bar .btn {
+	border:1px solid #DDD;
+	background-color:white;
+	min-width:40px;
+}
+#jl-base-app > #jl-head > #jl-head-content > .jl-buttons-bar #jl-btn-main-push.btn,
+#jl-base-app > #jl-head > #jl-head-content > .jl-buttons-bar #jl-btn-main-push.btn i.fa,
+#jl-base-app > #jl-head > #jl-head-content > .jl-buttons-bar #jl-btn-head-push.btn ,
+#jl-base-app > #jl-head > #jl-head-content > .jl-buttons-bar #jl-btn-head-push.btn i.fa {
+	transition: all .6s;
+}
+#jl-base-app.jl-mainPush-on > #jl-head > #jl-head-content > .jl-buttons-bar #jl-btn-main-push.btn {
+	background-color: #8fceff;
+}
+#jl-base-app.jl-mainPush-on > #jl-head > #jl-head-content > .jl-buttons-bar #jl-btn-main-push.btn i.fa{
+	-ms-transform: translateY(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);	
+}
+#jl-base-app.jl-headpush-on > #jl-head > #jl-head-content > .jl-buttons-bar #jl-btn-head-push.btn {
+	background-color: #8fceff;
+}
+#jl-base-app.jl-headpush-on > #jl-head > #jl-head-content > .jl-buttons-bar #jl-btn-head-push.btn i.fa{	
+    -ms-transform: translateY(-360deg); /* IE 9 */
+    -webkit-transform: rotate(-360deg); /* Chrome, Safari, Opera */
+    transform: rotate(-360deg);	
+    font-size:larger;
+    position:relative;
+    top:2px;
+}
+/* -------- MAIN --------- */
+#jl-base-app > #jl-main {
+	margin-top:50px;	
+	position:relative;
+	height:inherit;
+}
+#jl-base-app > #jl-main {
+
+}
+#jl-base-app > #jl-main > #jl-main-push {
+	height:inherit;
+	background:#0c0c0c;
+}
+#jl-base-app.jl-desktopSlide-on > #jl-main > #jl-main-push {
+	width:300px;	
+	position:absolute;
+	top:0px;
+	left:-300px;
+	z-index:2;
+	transition: left .3s;
+}
+#jl-base-app.jl-desktopSlide-on.jl-mainPush-on > #jl-main > #jl-main-push {
+	left:0px;
+}
+#jl-base-app > #jl-main > #jl-main-content {
+	padding:10px;
+}
+#jl-base-app.jl-desktopSlide-on > #jl-main > #jl-main-content {
+	margin-left:0px;
+	transition: margin-left .3s;
+}
+#jl-base-app.jl-desktopSlide-on.jl-mainPush-on > #jl-main > #jl-main-content {
+	margin-left:300px;
+	z-index:1;
+}
+/* -------- FOOT --------- */
+#jl-base-app > #jl-main > #jl-main-content > #jl-foot {	
+	padding:10px;
+	text-align: center;
+	background-color:transparent;	
+}
+
+/* -------- MEDIAS -------- */
+
+
+

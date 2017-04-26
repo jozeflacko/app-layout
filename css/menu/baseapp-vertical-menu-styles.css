@@ -1,0 +1,30 @@
+.jl-vertical-menu {   
+    padding:0px;  
+}
+.jl-vertical-menu li.jl-link {
+    list-style: none outside none;
+    border-bottom:1px solid #191919;      
+    color:#909090;
+    padding:20px 8px;  
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    font-size:20px; 
+}
+.jl-vertical-menu li.jl-link:hover {
+    background-color:#3f505d;
+    color:#e3e9ec;      
+}
+.jl-vertical-menu li.jl-link i.fa {   
+    color:#191919;
+    position:absolute;
+    right:10px;
+    top:-5px;
+    font-size:80px;
+    -ms-transform: translateY(15deg); /* IE 9 */
+    -webkit-transform: rotate(15deg); /* Chrome, Safari, Opera */
+    transform: rotate(15deg);    
+}
+.jl-vertical-menu li.jl-link:hover i.fa {
+    color:#728696;
+}

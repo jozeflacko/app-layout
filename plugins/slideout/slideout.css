@@ -9,10 +9,12 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   display: none;
+  background-color:black;	
 }
 .slideout-panel {
   position:relative;
   z-index: 1;
+  background-color:white;
 }
 .slideout-open,
 .slideout-open body,

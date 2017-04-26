@@ -7,10 +7,10 @@
 	<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css"/>
 	<link rel="stylesheet" href="plugins/slideout/slideout.css"/>
 	
-	<!-- base-app -->	
-	<link rel="stylesheet" href="css/base-app-root-styles.css"/>
-	<link rel="stylesheet" href="css/menu/base-app-vertical-menu-styles.css"/>
-	<link rel="stylesheet" href="css/menu/base-app-horizontal-menu-styles.css"/>
+	<!-- baseapp -->	
+	<link rel="stylesheet" href="css/baseapp.css"/>
+	<link rel="stylesheet" href="css/menu/baseapp-vertical-menu-styles.css"/>
+	<link rel="stylesheet" href="css/menu/baseapp-horizontal-menu-styles.css"/>
 
 	<body>		
 	 
@@ -22,14 +22,20 @@
 				
 				<div id='jl-head-content'>					
 					<div class='jl-buttons-bar'>						
-						<!-- Toggle push panel in header -->
-						<div class='btn' id='jl-btn-head-push'>
-							<i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
-						</div>
-						
 						<!-- Toggle push panel in main -->
 						<div class='btn' id='jl-btn-main-push'>
 							<i class="fa fa-bars" aria-hidden="true"></i>
+						</div>
+					</div>
+					
+					<div class='jl-logo'>						
+						HERE PUT LOGO
+					</div>
+										
+					<div class='jl-buttons-bar pull-right'>
+						<!-- Toggle push panel in header -->
+						<div class='btn' id='jl-btn-head-push'>
+							<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 						</div>
 					</div>
 				</div>
@@ -39,26 +45,53 @@
 				<div id='jl-main-push'>			
 					<ul class="jl-vertical-menu">
 						<li class="jl-link">
-							<i class="fa fa-times" aria-hidden="true"></i>
-							<span>ITEM 1</span>
+							<i class="fa fa-bolt" aria-hidden="true"></i>
+							<span>Item 1</span>
+						</li>
+						<li class="jl-link">
+							<i class="fa fa-rocket" aria-hidden="true"></i>
+							<span>Item 2</span>
+						</li>
+						<li class="jl-link">
+							<i class="fa fa-gamepad" aria-hidden="true"></i>
+							<span>Item 3</span>
+						</li>
+						<li class="jl-link">
+							<i class="fa fa-user-plus" aria-hidden="true"></i>
+							<span>Item 4</span>
+						</li>
+						<li class="jl-link">
+							<i class="fa fa-mars-stroke" aria-hidden="true"></i>
+							<span>Item 5</span>
+						</li>
+						<li class="jl-link">
+							<i class="fa fa-cog" aria-hidden="true"></i>
+							<span>Item 6</span>
+						</li>
+						<li class="jl-link">
+							<i class="fa fa-scissors" aria-hidden="true"></i>
+							<span>Item 7</span>
+						</li>
+						<li class="jl-link">
+							<i class="fa fa-circle" aria-hidden="true"></i>
+							<span>Item 9</span>
+						</li>
+						<li class="jl-link">
+							<i class="fa fa-heart" aria-hidden="true"></i>
+							<span>Item 7</span>
 						</li>
 						<li class="jl-link">
 							<i class="fa fa-times" aria-hidden="true"></i>
-							<span>ITEM 2</span>
-						</li>
-						<li class="jl-link">
-							<i class="fa fa-times" aria-hidden="true"></i>
-							<span>ITEM 3</span>
-						</li>
-						<li class="jl-link">
-							<i class="fa fa-times" aria-hidden="true"></i>
-							<span>ITEM 4</span>
+							<span>Item 10</span>
 						</li>
 					</ul>
 				</div>
 				
 				<div id='jl-main-content'>
-					<div class="jl-border">
+					
+					<!-- HERE COMES APPLICATION CONTENT -->
+					<div>
+						START<br/>
 						HERE COMES ALL CONTENT<br/>
 						HERE COMES ALL CONTENT<br/>
 						HERE COMES ALL CONTENT<br/>
@@ -114,14 +147,13 @@
 						HERE COMES ALL CONTENT<br/>
 						HERE COMES ALL CONTENT<br/>
 						HERE COMES ALL CONTENT<br/>
+						END<br/>
 					</div>
-				</div>
+					<div id="jl-foot">
+						Jozef Lacko 2017
+					</div> <!-- end of jl-foot -->
+				</div> <!-- end of jl-content -->
 			</div> <!-- end of jl-main -->
-
-			<div id="jl-foot">
-				FOOT
-			</div> <!-- end of jl-foot -->
-
 		</div> <!-- end of jl-base-app -->	
 		
 		<!-- plugins -->	
@@ -129,7 +161,7 @@
 		<script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script> 
 		<script type="text/javascript" src="plugins/slideout/slideout.min.js"></script>
 		<!-- base app -->	
-		<script type="text/javascript" src="js/base-app-scripts.js"></script>  
+		<script type="text/javascript" src="js/baseapp.js"></script>  
 	</body>
 </html>
 
