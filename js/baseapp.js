@@ -61,7 +61,7 @@ $( document ).ready(function() {
 					var properties = {
 						'panel': _get.panel.mainContent()[0],
 						'menu':  _get.panel.mainPush()[0],
-						'padding': 260,
+						'padding': 350, /* should be same as .slideout-menu css for width */
 						'tolerance': 70
 					};
 					

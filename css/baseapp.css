@@ -29,6 +29,20 @@ body {
 	background-color:#eee;	
 	padding:8px;	
 	border-bottom:2px solid #EEE;
+	position:relative;
+	overflow:hidden;
+}
+#jl-base-app > #jl-head > #jl-head-push > .jl-bg-icon {
+	position:absolute;
+	right:-10px;
+	top:-15px;
+	font-size:60px;
+	color:#e2e2e2;
+    -webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+    user-select: none;
+
 }
 #jl-base-app > #jl-head > #jl-head-content {
 	height:50px;
@@ -36,7 +50,7 @@ body {
 	border-bottom:2px solid red;
 }
 #jl-base-app > #jl-head > #jl-head-content > .jl-logo {
-	display:inline-block;
+	display:inline-block;	
 }
 #jl-base-app > #jl-head > #jl-head-content > .jl-buttons-bar {	
 	display:inline-block;
@@ -98,6 +112,7 @@ body {
 }
 #jl-base-app > #jl-main > #jl-main-content {
 	padding:10px;
+	background:#eee;
 }
 #jl-base-app.jl-desktopSlide-on > #jl-main > #jl-main-content {
 	margin-left:0px;
@@ -106,6 +121,14 @@ body {
 #jl-base-app.jl-desktopSlide-on.jl-mainPush-on > #jl-main > #jl-main-content {
 	margin-left:300px;
 	z-index:1;
+}
+#jl-base-app > #jl-main > #jl-main-content > div.jl-white-bg{
+	padding:10px;	
+	background:white;
+}
+#jl-base-app > #jl-main > #jl-main-content > div.jl-white-bg > div.jl-border {
+	padding:10px;	
+	border:1px solid #ddd;	
 }
 /* -------- FOOT --------- */
 #jl-base-app > #jl-main > #jl-main-content > #jl-foot {	
