@@ -1,10 +1,10 @@
-.jl-vertical-menu {   
+.jl-vertical-menu {
     padding:0px;
     position:fixed;
     width:250px;
     height:100%;
-    overflow:auto;   
-    padding-bottom:100px;  
+    overflow:auto;
+    padding-bottom:100px;
 }
 .jl-vertical-menu::-webkit-scrollbar {
     width: 0px; /* hide scrollbar */
@@ -12,21 +12,21 @@
 
 .jl-vertical-menu li.jl-link {
     list-style: none outside none;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #eee;
     padding: 15px 15px;
     cursor:pointer;
     position:relative;
     overflow:hidden;
-    font-size:20px;   
+    font-size:20px;
 }
 .jl-vertical-menu li.jl-link:hover {
     background-color:#ccc;       
 }
 .jl-vertical-menu li.jl-link.active {
-     background-color:#eee; 
-     color:red;
+     background-color: #afdaff;
 }
 .jl-vertical-menu li.jl-link i.fa {
+    display:none;
     color: #eeeeee;
     position:absolute;
     right: 10px;
@@ -39,7 +39,7 @@
     text-align: center;
 }
 .jl-vertical-menu li.jl-link.active i.fa {
-    color:#cccccc;
+    color: #ffffff;
 }
 .jl-vertical-menu li.jl-link:hover i.fa {
     

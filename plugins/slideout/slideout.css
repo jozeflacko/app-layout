@@ -24,7 +24,6 @@ html.slideout-open .slideout-menu {
   display: block;
 
 }
-
 html.slideout-open .slideout-panel,
 html.slideout-open .slideout-panel *{
   overflow:hidden !important;  
