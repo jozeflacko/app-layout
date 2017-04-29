@@ -19,12 +19,9 @@
 }
 .slideout-open,
 .slideout-open body{ 
-  
+  overflow-x:hidden;
 }
 .slideout-open .slideout-menu {
   display: block; 
 }
 
-.slideout-open .slideout-panel { 
-  
-}

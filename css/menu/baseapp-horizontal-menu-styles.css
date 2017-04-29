@@ -1,0 +1,32 @@
+.jl-horizontal-menu {            
+    display:inline-block;   
+    float:right;
+    margin-right:80px;
+}
+.jl-horizontal-menu li.jl-link {
+    list-style: none outside none;
+    display:inline-block;   
+    background:rgba(255, 255, 255, 0.6);
+    padding:5px 20px;    
+}
+.jl-horizontal-menu li.jl-link:first-child {
+    border-radius:0px 0px 0px 30px;
+}
+.jl-horizontal-menu li.jl-link:last-child {
+    border-radius:0px 0px 30px 0px;
+}
+.jl-horizontal-menu li.jl-link:hover {
+     background:#dddddd;
+}
+.jl-horizontal-menu li.jl-link.active {
+     
+}
+.jl-horizontal-menu li.jl-link i.fa {
+   
+}
+.jl-horizontal-menu li.jl-link.active i.fa {
+   
+}
+.jl-horizontal-menu li.jl-link:hover i.fa {
+    
+}

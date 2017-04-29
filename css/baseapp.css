@@ -14,6 +14,7 @@ body {
 /* -------- HEAD --------- */
 #jl-base-app > #jl-head {
 	position:fixed;
+	height: 36px;
 	top:-50px;
 	left:0px;
 	width:100%;
@@ -26,9 +27,7 @@ body {
 }
 #jl-base-app > #jl-head > #jl-head-push {
 	height:50px;
-	background-color:#eee;	
-	padding:8px;	
-	border-bottom:2px solid #EEE;
+	background-color: #b8d1e6;
 	position:relative;
 	overflow:hidden;
 }
@@ -37,29 +36,55 @@ body {
 	right:-10px;
 	top:-15px;
 	font-size:60px;
-	color:#e2e2e2;
-    -webkit-user-select: none;
+	color: #9db8ce;
+	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-    user-select: none;
-
+	user-select: none;
 }
 #jl-base-app > #jl-head > #jl-head-content {
-	height:50px;
-	background-color:white;	
+	height: 36px;
+	background-color:white;
 	border-bottom:2px solid red;
 }
 #jl-base-app > #jl-head > #jl-head-content > .jl-logo {
-	display:inline-block;	
-}
-#jl-base-app > #jl-head > #jl-head-content > .jl-buttons-bar {	
 	display:inline-block;
-	padding:7px;
+	font-size:15px;
+	color:#ff0000;
+	position:relative;
+	margin-left:15px;
+	margin-right:15px;
+	padding:5px;
+}
+#jl-base-app > #jl-head > #jl-head-content > .jl-logo i.fa {
+	position:relative;
+	top:-4px;
+	width:25px;
+	height:25px;
+	color:white;	
+	background:#ff1f1f;
+	border-radius:50%;
+	font-size:15px;
+}
+#jl-base-app > #jl-head > #jl-head-content > .jl-logo i.fa:before {
+	position:relative;
+	left:5px;
+	top:6px;
+}
+
+#jl-base-app > #jl-head > #jl-head-content > .jl-buttons-bar {
+	display:inline-block;
+	height: 100%;
 }
 #jl-base-app > #jl-head > #jl-head-content > .jl-buttons-bar .btn {
-	border:1px solid #DDD;
-	background-color:white;
-	min-width:40px;
+	background-color: white;
+	min-width:35px;
+	/* height:100%; */
+	border-radius:0px;
+	text-align:center;
+}
+#jl-base-app > #jl-head > #jl-head-content > .jl-buttons-bar .btn:hover {
+	background-color: #eee;	
 }
 #jl-base-app > #jl-head > #jl-head-content > .jl-buttons-bar #jl-btn-main-push.btn,
 #jl-base-app > #jl-head > #jl-head-content > .jl-buttons-bar #jl-btn-main-push.btn i.fa,
@@ -67,28 +92,41 @@ body {
 #jl-base-app > #jl-head > #jl-head-content > .jl-buttons-bar #jl-btn-head-push.btn i.fa {
 	transition: all .6s;
 }
+#jl-base-app > #jl-head > #jl-head-content > .jl-buttons-bar #jl-btn-main-push.btn {
+}
+#jl-base-app > #jl-head > #jl-head-content > .jl-buttons-bar #jl-btn-main-push.btn i.fa{
+}
 #jl-base-app.jl-mainPush-on > #jl-head > #jl-head-content > .jl-buttons-bar #jl-btn-main-push.btn {
-	background-color: #8fceff;
 }
 #jl-base-app.jl-mainPush-on > #jl-head > #jl-head-content > .jl-buttons-bar #jl-btn-main-push.btn i.fa{
 	-ms-transform: translateY(180deg); /* IE 9 */
     -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
-    transform: rotate(180deg);	
+    transform: rotate(180deg);	   
 }
-#jl-base-app.jl-headpush-on > #jl-head > #jl-head-content > .jl-buttons-bar #jl-btn-head-push.btn {
-	background-color: #8fceff;
+#jl-base-app > #jl-head > #jl-head-content > .jl-buttons-bar #jl-btn-head-push.btn {	
+	
+}
+#jl-base-app > #jl-head > #jl-head-content > .jl-buttons-bar #jl-btn-head-push.btn:hover {
+	background-color: #b8d1e6	
+}
+#jl-base-app.jl-headpush-on  > #jl-head > #jl-head-content > .jl-buttons-bar #jl-btn-head-push.btn {
+	background-color: #b8d1e6;	
+	border-radius:0px 0px  0px  30px;
+	padding-left:30px;
+}
+#jl-base-app > #jl-head > #jl-head-content > .jl-buttons-bar #jl-btn-head-push.btn i.fa{
+	position:relative;    
+    top:1px; 
+	margin-right:5px;
 }
 #jl-base-app.jl-headpush-on > #jl-head > #jl-head-content > .jl-buttons-bar #jl-btn-head-push.btn i.fa{	
-    -ms-transform: translateY(-360deg); /* IE 9 */
-    -webkit-transform: rotate(-360deg); /* Chrome, Safari, Opera */
-    transform: rotate(-360deg);	
-    font-size:larger;
-    position:relative;
-    top:2px;
+    -ms-transform: translateY(-90deg); /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
 }
 /* -------- MAIN --------- */
 #jl-base-app > #jl-main {
-	margin-top:50px;	
+	margin-top: 36px;
 	position:relative;
 	height:inherit;
 }
@@ -97,7 +135,7 @@ body {
 }
 #jl-base-app > #jl-main > #jl-main-push {
 	height:inherit;
-	background:#0c0c0c;
+	background:#ddd;
 }
 #jl-base-app.jl-desktopSlide-on > #jl-main > #jl-main-push {
 	width:300px;	
@@ -137,7 +175,6 @@ body {
 	background-color:transparent;	
 }
 
-/* -------- MEDIAS -------- */
 
 
 

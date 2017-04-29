@@ -9,6 +9,8 @@
 	
 	<!-- baseapp -->	
 	<link rel="stylesheet" href="css/baseapp.css"/>
+	<link rel="stylesheet" href="css/baseappMobile.css"/>
+	<link rel="stylesheet" href="css/spin.css"/>
 	<link rel="stylesheet" href="css/menu/baseapp-vertical-menu-styles.css"/>
 	<link rel="stylesheet" href="css/menu/baseapp-horizontal-menu-styles.css"/>
 
@@ -17,28 +19,49 @@
 		<div id='jl-base-app'>	
 			<div id="jl-head">
 				<div id='jl-head-push'>
-					<i class="jl-bg-icon fa fa-cog" aria-hidden="true"></i>
-					TOP PUSH PANEL
+					<i class="jl-bg-icon jl-spin fa fa-cog" aria-hidden="true"></i>
+					<ul class="jl-horizontal-menu">
+						<li class="jl-link">
+							<i class="fa fa-bolt" aria-hidden="true"></i>
+							<span class="hidden-xs">Item 1</span>
+						</li>
+						<li class="jl-link">
+							<i class="fa fa-bolt" aria-hidden="true"></i>
+							<span class="hidden-xs">Item 2</span>
+						</li>
+						<li class="jl-link">
+							<i class="fa fa-bolt" aria-hidden="true"></i>
+							<span class="hidden-xs">Item 3</span>
+						</li>
+						<li class="jl-link">
+							<i class="fa fa-bolt" aria-hidden="true"></i>
+							<span class="hidden-xs">Item 4</span>
+						</li>
+					</ul>
 				</div>
 				
 				<div id='jl-head-content'>					
 					<div class='jl-buttons-bar'>						
 						<!-- Toggle push panel in main -->
-						<div class='btn' id='jl-btn-main-push'>
+						<div class='btn' id='jl-btn-main-push'>	
 							<i class="fa fa-bars" aria-hidden="true"></i>
 						</div>
 					</div>
 					
-					<div class='jl-logo'>						
-						HERE PUT LOGO
-					</div>
-										
 					<div class='jl-buttons-bar pull-right'>
 						<!-- Toggle push panel in header -->
 						<div class='btn' id='jl-btn-head-push'>
 							<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+							<span class="hidden-xs">System Menu</span>
 						</div>
 					</div>
+
+					<div class='jl-logo pull-right'>						
+						<i class="fa fa-rocket" aria-hidden="true"></i>
+						<span class="hidden-xs">BaseApp</span>
+					</div>
+										
+
 				</div>
 			</div>  <!-- end of jl-head -->
 			
@@ -53,7 +76,7 @@
 							<i class="fa fa-rocket" aria-hidden="true"></i>
 							<span>Item 2</span>
 						</li>
-						<li class="jl-link">
+						<li class="jl-link active">
 							<i class="fa fa-gamepad" aria-hidden="true"></i>
 							<span>Item 3</span>
 						</li>
@@ -91,6 +114,10 @@
 				<div id='jl-main-content'>
 					<div class="jl-white-bg">
 						<div class="jl-border">
+							<h1>
+								Item 3
+								<hr/>
+							</h1>
 							START<br/>
 							HERE COMES ALL CONTENT<br/>
 							HERE COMES ALL CONTENT<br/>

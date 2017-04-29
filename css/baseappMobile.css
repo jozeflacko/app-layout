@@ -1,0 +1,13 @@
+@media screen and (max-width: 768px) {    
+
+	#jl-base-app > #jl-main > #jl-main-content {
+		padding:5px;		
+	}
+	#jl-base-app > #jl-main > #jl-main-content div.jl-white-bg {
+		padding:5px;		
+	}
+	#jl-base-app > #jl-main > #jl-main-content div.jl-white-bg div.jl-border {
+		
+	}
+
+}
