@@ -5,152 +5,31 @@ var JLApplication = JLApplication || {};
     	
 JLApplication.baseApp = (function(){
 	
-	var _get; // from get-elements
-	
-	var _pushingPanels = (function(){
-		
-		var mainPushPanel = (function (){
-
-			var MAINPUSH_ON = "jl-mainPush-on";
-
-			var slideoutPlugin = (function(){
-				
-				var SLIDEOUT_ON = "jl-slideoutPlugin-on";
-				var CLICK = "click.jl-slideoutPlugin";
-				var thisObject = null;
-				var isInstalled = false;
-				function getProperties(){
-					return {
-						'panel': _get.panel.mainContent()[0],
-						'menu':  _get.panel.mainPush()[0],
-						'padding': 250, /* should be same as .slideout-menu css for width */
-						'tolerance': 70
-					}
-				};
-				
-				return {
-					install : function(){
-						if( isInstalled === true )
-							return;
-						
-						isInstalled = true;
-						thisObject = new Slideout( getProperties() );
-						_get.panel.base().addClass(SLIDEOUT_ON);
-						_get.btn.mainPush().on(CLICK, function(e){ 
-							thisObject.toggle(e); 
-							_get.panel.base().toggleClass(MAINPUSH_ON);	
-						});
-					},
-					destroy : function(){
-						if( isInstalled === false )
-							return;
-						
-						isInstalled = false;				
-						thisObject.destroy();
-						findAndRemoveClasses(['slideout-panel','slideout-panel-left','slideout-menu','slideout-menu-left']);
-
-						_get.btn.mainPush().off(CLICK);
-						_get.panel.base().removeClass(SLIDEOUT_ON);
-
-						function findAndRemoveClasses( classes ){
-							for(var i=0; i<classes.length; i++)
-								$('.'+classes[i]).removeClass(classes[i]);
-						}
-
-					},
-					close : function(){						
-						if ( isInstalled === true )
-							thisObject.close();	
-					},			
-				};
-			})(); // end mainPushPanel							
-		
-			var desktopSlide = (function(){
-				
-				var DESKTOPSLIDE_ON = "jl-desktopSlide-on";					
-				var CLICK = "click.jl-desktopSlide";
-				var isInstalled = false;
-				
-				return {
-					install : function(){
-						if( isInstalled === true )
-							return;
-						
-						isInstalled = true;							
-						_get.panel.base().addClass(DESKTOPSLIDE_ON).addClass(MAINPUSH_ON);
-						_get.btn.mainPush().on(CLICK, function(e){ 
-							_get.panel.base().toggleClass(MAINPUSH_ON);								
-						});
-					},
-					destroy : function(){
-						if( isInstalled === false )
-							return;
-						
-						isInstalled = false;
-						_get.btn.mainPush().off(CLICK);
-						_get.panel.base().removeClass(DESKTOPSLIDE_ON);
-					},
-				}; 				
-			})(); // end desktopSlide	
-			
-			function isSmallDevice( maxWidth ){
-				return $(window).width() <= maxWidth;
-			}
-
-			return {
-				install : function(){
-					var RESIZE = 'resize.jl-main-push-resize';	
-					var SMALL_DEVICE_MAX_WIDTH = 768;					
-					
-					$(window).on(RESIZE,function() {							
-						
-						if ( isSmallDevice( SMALL_DEVICE_MAX_WIDTH ) === true ){
-							desktopSlide.destroy();
-							slideoutPlugin.install();
-						} else {
-							slideoutPlugin.destroy();
-							desktopSlide.install();
-						}
-						
-					}).trigger(RESIZE);
-				},
-				closeSlideoutPanel : slideoutPlugin.close,
-			}; 
-		})(); // end mainPushPanel
-
-		var headPushPanel = (function(){
-			
-			var HEADPUSH_ON = "jl-headpush-on";
-			var CLICK = "click.jl-headpush";
-			
-			return {
-				install : function(){
-					_get.btn.headPush().on(CLICK,function(e){ 
-						_get.panel.base().toggleClass(HEADPUSH_ON);
-					});
-				}
-			}
-		})(); // end headPushPanel
-	
-		return {
-			install : function(){				
-				mainPushPanel.install();
-				headPushPanel.install();
-			},	
-			closeSlideoutPanel : mainPushPanel.closeSlideoutPanel,
-		};
-	})(); // end _pushingPanels
+	var _baseAppObject; // from get-elements
 	
 	return {
 		start : function(){	
 				$( document ).ready(function() {
-					_get = JLApplication.elements;
-					_pushingPanels.install();
+					_baseAppObject = JLApplication.elements;
+					
+					JLApplication.pushPanels.install({
+						get : _baseAppObject,
+					});
 					
 					JLApplication.menu.vertical.install({
-						closeSlideoutPanel : _pushingPanels.closeSlideoutPanel,
+						get : _baseAppObject,
+						closeSlideoutPanel : JLApplication.pushPanels.closeSlideoutPanel,
+						menu : {
+							link : { faIcon : '', text : '', url : '', id : '' },
+							link : { faIcon : '', text : '', url : '', id : '' },
+							link : { faIcon : '', text : '', url : '', id : '' },
+							link : { faIcon : '', text : '', url : '', id : '' },
+						},
 					});
-					JLApplication.menu.horizontal.install();
+					
+					JLApplication.menu.horizontal.install({
+						get : _baseAppObject,						
+					});
 					
 					console.log('>>> JL BASEAPP installation done. <<<');
 			});
@@ -158,4 +37,5 @@ JLApplication.baseApp = (function(){
 	}
 })(); // end baseApp		
 	
+// START
 JLApplication.baseApp.start();	
