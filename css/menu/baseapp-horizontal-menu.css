@@ -1,0 +1,31 @@
+.nav.navbar-nav.jl-horizontal-menu {
+    display:inline-block;
+    float:right;
+    margin-top:20px;
+    margin-right:80px;
+    padding:0px;   
+    z-index:20;
+}
+.nav.navbar-nav.jl-horizontal-menu li {   
+    z-index:20;
+}
+.nav.navbar-nav.jl-horizontal-menu li > a{
+    padding:4px 10px;
+}
+.nav.navbar-nav.jl-horizontal-menu li ul li{
+	
+}
+
+@media screen and (max-width: 768px) {    
+
+	.nav.navbar-nav.jl-horizontal-menu {      
+       width:100%;
+       display:block;
+       float:initial;      
+       margin:0px; 
+	}
+	.nav.navbar-nav.jl-horizontal-menu li.dropdown {
+		display:none;
+    }
+    
+}

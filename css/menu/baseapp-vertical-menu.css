@@ -24,22 +24,22 @@
 }
 .jl-vertical-menu li.jl-link.active {
      background-color: #afdaff;
+     color:red;
 }
-.jl-vertical-menu li.jl-link i.fa {
-    display:none;
-    color: #eeeeee;
-    position:absolute;
-    right: 10px;
-    top: -5px;
-    font-size: 60px;
+.jl-vertical-menu li.jl-link i.fa {    
+    color: #3c3c3c;
+    font-size: 15px;
     -ms-transform: translateY(15deg); /* IE 9 */
     -webkit-transform: rotate(15deg); /* Chrome, Safari, Opera */
     transform: rotate(15deg);
-    width:60px;
+    width:30px;
     text-align: center;
+    position:relative;
+    top:-2px;
+ 
 }
 .jl-vertical-menu li.jl-link.active i.fa {
-    color: #ffffff;
+    color: red;   
 }
 .jl-vertical-menu li.jl-link:hover i.fa {
     
