@@ -188,10 +188,6 @@ body {
 #jl-base-app.jl-desktopSlide-on.jl-mainPush-on > #jl-main > #jl-main-push {
 	left:0px;
 }
-#jl-base-app > #jl-main > #jl-main-push .jl-vertical-menu div.jl-info {
-    background-color:#ff8d8d;
-    height:100px;
-}
 #jl-base-app > #jl-main > #jl-main-content {
 	padding:10px;
 	background: #e5f3ff;

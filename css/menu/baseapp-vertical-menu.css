@@ -9,6 +9,20 @@
 .jl-vertical-menu::-webkit-scrollbar {
     width: 0px; /* hide scrollbar */
 }
+.jl-vertical-menu li.jl-info {
+    background-color:#fff;
+	background-image: linear-gradient(30deg, #efefef 12%, transparent 12.5%, transparent 87%, #efefef 87.5%, #efefef),
+	linear-gradient(150deg, #efefef 12%, transparent 12.5%, transparent 87%, #efefef 87.5%, #efefef),
+	linear-gradient(30deg, #efefef 12%, transparent 12.5%, transparent 87%, #efefef 87.5%, #efefef),
+	linear-gradient(150deg, #efefef 12%, transparent 12.5%, transparent 87%, #efefef 87.5%, #efefef),
+	linear-gradient(60deg, #e2e2e2 25%, transparent 25.5%, transparent 75%, #e2e2e2 75%, #e2e2e2), 
+	linear-gradient(60deg, #e2e2e2 25%, transparent 25.5%, transparent 75%, #e2e2e2 75%, #e2e2e2);
+	background-size:80px 140px;
+	background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+    height:150px;
+    border-bottom:1px solid #ddd;
+	padding:10px;
+}
 .jl-vertical-menu li.jl-divider {
     cursor:default;
     border-bottom: 1px solid #ddd;
