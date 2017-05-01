@@ -18,7 +18,7 @@
 
 	<body>		
 	 
-		<div id='jl-base-app'>	
+		<div id='jl-base-app' class='jl-hidden'>	
 			<div id="jl-head">
 				<div id='jl-head-push'>
 					<i class="jl-bg-icon jl-spin fa fa-cog" aria-hidden="true"></i>
@@ -69,8 +69,12 @@
 			</div>  <!-- end of jl-head -->
 			
 			<div id="jl-main">				
-				<div id='jl-main-push'>			
+				<div id='jl-main-push'>	
+					<div class="jl-info">
+							BLA BLA
+					</div>	
 					<ul class="jl-vertical-menu">
+											
 						<li class="jl-link">
 							<i class="fa fa-bolt" aria-hidden="true"></i>
 							<span>Item 1</span>
@@ -79,10 +83,11 @@
 							<i class="fa fa-rocket" aria-hidden="true"></i>
 							<span>Item 2</span>
 						</li>
+						<li class="jl-divider"/>
 						<li class="jl-link active">
 							<i class="fa fa-gamepad" aria-hidden="true"></i>
 							<span>Item 3</span>
-						</li>
+						</li>						
 						<li class="jl-link">
 							<i class="fa fa-user-plus" aria-hidden="true"></i>
 							<span>Item 4</span>
@@ -99,7 +104,7 @@
 							<i class="fa fa-scissors" aria-hidden="true"></i>
 							<span>Item 7</span>
 						</li>
-						
+						<li class="jl-divider"/>
 						<li class="jl-link">
 							<i class="fa fa-heart" aria-hidden="true"></i>
 							<span>Item 8</span>
@@ -203,12 +208,16 @@
 		<script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script> 
 		<script type="text/javascript" src="plugins/slideout/slideout.min.js"></script>
 		<script type="text/javascript" src="plugins/sweetalert2/sweetalert2.min.js"></script>
-		<!-- base app -->			
-		<script type="text/javascript" src="js/baseapp-get-elements.js"></script>  
-		<script type="text/javascript" src="js/pushPanels/baseapp-push-panels.js"></script>  
-		<script type="text/javascript" src="js/pushPanels/menu/baseapp-vertical-menu.js"></script>  
-		<script type="text/javascript" src="js/pushPanels/menu/baseapp-horizontal-menu.js"></script>  
-		<script type="text/javascript" src="js/baseapp.js"></script>  
+		<!-- base app -->	
+		<script type="text/javascript" src="js/ba-root.js"></script>  		
+		<script type="text/javascript" src="js/ba-elements.js"></script>  
+		<script type="text/javascript" src="js/pushPanels/ba-push-panels.js"></script>  
+		<script type="text/javascript" src="js/pushPanels/headPush/ba-head-push-panel.js"></script>  
+		<script type="text/javascript" src="js/pushPanels/mainPush/ba-main-push-panel.js"></script>  
+		
+		<script type="text/javascript" src="js/pushPanels/menu/ba-vertical-menu.js"></script>  
+		<script type="text/javascript" src="js/pushPanels/menu/ba-horizontal-menu.js"></script>  
+		
 	</body>
 </html>
 

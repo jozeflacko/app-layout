@@ -8,6 +8,9 @@ body {
 	transition: top .3s;
 	height:inherit;
 }
+#jl-base-app.jl-hidden {
+	display:none;	
+}
 #jl-base-app.jl-headpush-on {
 	top:50px;
 }
@@ -184,6 +187,10 @@ body {
 }
 #jl-base-app.jl-desktopSlide-on.jl-mainPush-on > #jl-main > #jl-main-push {
 	left:0px;
+}
+#jl-base-app > #jl-main > #jl-main-push .jl-vertical-menu div.jl-info {
+    background-color:#ff8d8d;
+    height:100px;
 }
 #jl-base-app > #jl-main > #jl-main-content {
 	padding:10px;

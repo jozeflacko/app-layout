@@ -26,8 +26,8 @@ JLApplication.menu.horizontal = (function(){
 	}
 
 	return {
-		install : function(){
-			_get = JLApplication.elements;
+		install : function(properties){
+			_get = properties.get;
 			_installClick();
 		}			
 	}

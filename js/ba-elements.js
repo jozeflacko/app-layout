@@ -1,8 +1,9 @@
 /** Jozef Lacko 2017 BaseApp */
 
 var JLApplication = JLApplication || {}; 
+JLApplication.baseApp = JLApplication.baseApp || {};
 
-JLApplication.elements = (function(){	
+JLApplication.baseApp.elements = (function(){	
 	
 	var loc = {
 		panels  : {

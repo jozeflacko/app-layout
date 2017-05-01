@@ -16,7 +16,7 @@ JLApplication.menu.vertical = (function(){
 	};
 	var loc = {
 		VERTICAL_MENU : 'ul.jl-vertical-menu',
-		LI : 'li',
+		LI : 'li.jl-link',
 	}
 
 	function _onLiClick(e){
@@ -35,7 +35,7 @@ JLApplication.menu.vertical = (function(){
 
 	return {
 		install : function(properties){
-			_get = JLApplication.elements;
+			_get = properties.get;
 			_properties = properties;
 			_installClick(properties);
 		}			

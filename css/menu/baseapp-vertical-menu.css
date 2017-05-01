@@ -9,7 +9,12 @@
 .jl-vertical-menu::-webkit-scrollbar {
     width: 0px; /* hide scrollbar */
 }
-
+.jl-vertical-menu li.jl-divider {
+    cursor:default;
+    border-bottom: 1px solid #ddd;
+    padding:0px;
+    height:0px;
+}
 .jl-vertical-menu li.jl-link {
     list-style: none outside none;
     border-bottom: 1px solid #eee;
