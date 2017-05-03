@@ -1,6 +1,6 @@
-body {
-	width:100%;
-	height:100%;
+html,
+body {	
+	background-color:#e5f3ff;
 }
 #jl-base-app {
 	position:relative;
