@@ -15,18 +15,25 @@
   position:relative;
   z-index: 1;
   background-color:white;
+
+  -webkit-transition: .5s -webkit-filter linear;
+  -moz-transition: .5s -moz-filter linear;
+  -moz-transition: .5s filter linear;
+  -ms-transition: .5s -ms-filter linear;
+  -o-transition: .5s -o-filter linear;
+  transition: .5s filter linear;
 }
 html.slideout-open,
-html.slideout-open body{ 
-  overflow-x:hidden;  
+html.slideout-open body { 
+  overflow:hidden;  /* to be not possible to scroll anything else just menu */
 }
 html.slideout-open .slideout-menu {
   display: block;
 
 }
-html.slideout-open .slideout-panel,
-html.slideout-open .slideout-panel *{
-  overflow:hidden !important;  
+html.slideout-open .slideout-panel {   
+  -webkit-box-shadow: 0 0 1px 3px #000 ;
+  -moz-box-shadow: 0 0 1px 3px #000 ;
+  box-shadow: -5px -5px 20px rgba(173, 173, 173, 0.88);
+  border-left:1px solid #bbb;
 }
-
-

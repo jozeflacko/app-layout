@@ -1,9 +1,11 @@
 /** Jozef Lacko 2017 BaseApp */
 
 var JLApplication = JLApplication || {}; 
-JLApplication.menu = JLApplication.menu || {};
+JLApplication.baseApp = JLApplication.baseApp || {};
+JLApplication.baseApp.pushPanels = JLApplication.baseApp.pushPanels || {}; 
+JLApplication.baseApp.pushPanels.head = JLApplication.baseApp.pushPanels.head || {}; 
 
-JLApplication.menu.horizontal = (function(){	
+JLApplication.baseApp.pushPanels.head.horizontalMenu = (function(){	
 			
 	var _get; // from get-elements
 	var $li;

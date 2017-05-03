@@ -3,6 +3,7 @@
 var JLApplication = JLApplication || {}; 
 JLApplication.baseApp = JLApplication.baseApp || {};
 JLApplication.baseApp.pushPanels  = JLApplication.baseApp.pushPanels || {}; 
+JLApplication.baseApp.pushPanels.main = JLApplication.baseApp.pushPanels.main || {};
     	
 JLApplication.baseApp.pushPanels.main = (function(){
 	
@@ -93,25 +94,35 @@ JLApplication.baseApp.pushPanels.main = (function(){
 	function isSmallDevice( maxWidth ){
 		return $(window).width() <= maxWidth;
 	}
+	function _installPanelPushMain(){
+		var RESIZE = 'resize.jl-main-push-resize';	
+		var SMALL_DEVICE_MAX_WIDTH = 768;					
+		
+		$(window).on(RESIZE,function() {							
+			
+			if ( isSmallDevice( SMALL_DEVICE_MAX_WIDTH ) === true ){
+				desktopSlide.destroy();
+				slideoutPlugin.install();
+			} else {
+				slideoutPlugin.destroy();
+				desktopSlide.install();
+			}
+			
+		}).trigger(RESIZE);
+	}	
 
 	return {
 		install : function(properties){
 			_get = properties.get;
 			
-			var RESIZE = 'resize.jl-main-push-resize';	
-			var SMALL_DEVICE_MAX_WIDTH = 768;					
+			var that = this;
+						
+			_installPanelPushMain();
 			
-			$(window).on(RESIZE,function() {							
-				
-				if ( isSmallDevice( SMALL_DEVICE_MAX_WIDTH ) === true ){
-					desktopSlide.destroy();
-					slideoutPlugin.install();
-				} else {
-					slideoutPlugin.destroy();
-					desktopSlide.install();
-				}
-				
-			}).trigger(RESIZE);
+			that.verticalMenu.install({
+				get : _get,
+				closeSlideoutPanel : that.closeSlideoutPanel,
+			});
 		},
 		closeSlideoutPanel : slideoutPlugin.close,
 	}; 

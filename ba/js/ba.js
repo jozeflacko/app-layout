@@ -30,16 +30,7 @@ JLApplication.baseApp = (function(){
 					
 					that.pushPanels.install({
 						get : _elements,
-					});
-					
-					JLApplication.menu.vertical.install({
-						get : _elements,
-						closeSlideoutPanel : that.pushPanels.main.closeSlideoutPanel,
-					});
-					
-					JLApplication.menu.horizontal.install({
-						get : _elements,						
-					});
+					});	
 
 					_show();
 					
