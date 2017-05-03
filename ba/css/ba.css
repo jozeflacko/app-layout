@@ -191,6 +191,8 @@ body {
 #jl-base-app > #jl-main > #jl-main-content {
 	padding:10px;
 	background: #e5f3ff;
+	text-align: justify;
+    text-justify: inter-word;
 }
 #jl-base-app.jl-desktopSlide-on > #jl-main > #jl-main-content {
 	margin-left:0px;
