@@ -10,7 +10,7 @@
 
 ### Screenshot
 <p style='max-width:360px;'>
-	<img src="https://github.com/jozeflacko/flower/blob/master/img/index.png?raw=true" alt="Smiley flower">
+	<img src="https://github.com/jozeflacko/app-layout/blob/master/img/index.jpg?raw=true" alt="Smiley flower">
 </p> 
 
 ## Authors
