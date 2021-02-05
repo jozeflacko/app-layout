@@ -1,11 +1,18 @@
 # Base app - starting template for web app
 
 <p>
-	This is a template for one page applications.
+	Quite nice template for single page applications using JQuery.
 </p>
-<h3>
-	You can try the template out <a href='https://rawgit.com/opam/BaseApp/master/index.html'>here!</a>
-</h3>
+
 <p>
 	Project contains starting point for creating Web App. It has working placeholders for menu, content, header and system panel
 </p>
+
+### Screenshot
+<p style='max-width:360px;'>
+	<img src="https://github.com/jozeflacko/flower/blob/master/img/index.png?raw=true" alt="Smiley flower">
+</p> 
+
+## Authors
+
+* **Jozef Lacko** - *Initial work* - [Jozef Lacko](https://jozeflacko.github.io)
